@@ -12,7 +12,7 @@ class Stack {
   }
 
   public void push(int x){
-		if (isFull()){
+    if (isFull()){
 			System.out.println("Error1");
 			System.exit(1);
 		}
@@ -21,7 +21,7 @@ class Stack {
 	}
 
   public int pop(){
-		if (isEmpty()){
+    if (isEmpty()){
 			System.out.println("Error2");
 			System.exit(1);
 		}
@@ -30,7 +30,7 @@ class Stack {
 	}
 
   public int peek(){
-		if (!isEmpty()){
+    if (!isEmpty()){
       return list[top];
     }
 		else{
@@ -40,14 +40,14 @@ class Stack {
 	}
 
   public Boolean isFull(){
-		return top == capacity - 1;	
+    return top == capacity - 1;	
 	}
 
   public Boolean isEmpty(){
-		return top == -1;
+    return top == -1;
 	}
 
   public int size(){
-		return top + 1;
+    return top + 1;
 	}
 }
