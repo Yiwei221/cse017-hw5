@@ -7,8 +7,20 @@ class Queue{
 
   public Queue(int n){
     size = n;
-		this.list = new int[n];
-		this.back = -1;
-		this.front = -1;
+    this.list = new int[n];
+    this.back = -1;
+    this.front = -1;
   } 
+
+  public void push(int item) {
+    if (((back + 1) % size) == front) {
+      System.out.println("full");
+    } else {
+      if (back == front && front == -1) {
+        front = 0;
+      }
+      back = (back + 1) % size;
+      list[back] = item;
+    }
+  }
 }
