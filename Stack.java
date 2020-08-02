@@ -22,11 +22,11 @@ class Stack {
 
   public int pop(){
     if (isEmpty()){
-			System.out.println("Error2");
-			System.exit(1);
+      System.out.println("Error2");
+      System.exit(1);
 		}
-		System.out.println("Remove: " + peek());
-		return list[top--];
+    System.out.println("Remove: " + peek());
+    return list[top--];
 	}
 
   public int peek(){
@@ -36,7 +36,7 @@ class Stack {
 		else{
       System.exit(1);
     }
-		return -1;
+    return -1;
 	}
 
   public Boolean isFull(){
