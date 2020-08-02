@@ -7,7 +7,7 @@ class Stack {
   public Stack(int n){
     list= new int[n];
     capacity = n;
-    size=capacity;
+    size=n;
     top = -1;
   }
 
@@ -15,27 +15,45 @@ class Stack {
 	{
 		if (isFull())
 		{
-			System.out.println("Error");
+			System.out.println("Error1");
 			System.exit(1);
 		}
 		System.out.println("insert: " + x);
 		list[++top] = x;
 	}
 
-  public int pop()
-	{
-		if (isEmpty())
-		{
+  public int pop(){
+		if (isEmpty()){
 			System.out.println("Error2");
 			System.exit(1);
 		}
-
 		System.out.println("Remove: " + peek());
 		return list[top--];
 	}
 
   public int peek()
 	{
-		return list[top];
+		if (!isEmpty()){
+      return list[top];
+    }
+		else{
+      System.exit(1);
+    }
+		return -1;
+	}
+
+  public Boolean isFull()
+	{
+		return top == capacity - 1;	
+	}
+
+  public Boolean isEmpty()
+	{
+		return top == -1;
+	}
+
+  public int size()
+	{
+		return top + 1;
 	}
 }
