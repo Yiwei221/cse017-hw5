@@ -17,7 +17,7 @@ class Stack {
     }
     System.out.println("insert: " + x);
     list[++top] = x;
-   }
+    }
 
   public int pop(){
     if (isEmpty()){
