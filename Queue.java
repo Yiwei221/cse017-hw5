@@ -45,12 +45,12 @@ class Queue{
     if (back == front && back == -1) {
       System.out.println("Queue is empty.");
       throw new RuntimeException();
-		} else {
+    } else {
       return list[front];
     }
-	}
+  }
 
   public int size(){
     return back + 1;
-	}
+  }
 }
