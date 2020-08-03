@@ -47,7 +47,7 @@ class Graph{
         break;
       }else{
         for(int j=0;j<graph[0].length;j++){
-          if(graph[n][j]==1){
+          if(graph[start][j]==1){
           stack.push(j);  
           }
         }
