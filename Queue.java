@@ -28,17 +28,17 @@ class Queue{
     if (back == front && back == -1) {
       System.out.println("Queue is empty.");
       throw new RuntimeException();
-		} else {
-			int item = list[front];
-			list[front] = 0;//reset data
-			if (back == front) {//Queue is empty
-				back = -1;
-				front = -1;
-			} else {
-				front = (front + 1) % size;
-			}
-			return item;
-		}
+    } else {
+      int item = list[front];
+      list[front] = 0;//reset data
+      if (back == front) {//Queue is empty
+        back = -1;
+        front = -1;
+      } else {
+        front = (front + 1) % size;
+      }
+      return item;
+    }
   }
 
   public int peek(){
@@ -50,4 +50,7 @@ class Queue{
     }
 	}
 
+  public int size(){
+    return back + 1;
+	}
 }
