@@ -16,9 +16,9 @@ class Main {
 
     System.out.println("Queue: ");
     int size = 10;
-		Queue queue = new Queue(size);
+    Queue queue = new Queue(size);
 
-		queue.push(5);
+    queue.push(5);
     System.out.println("Top elment: " + queue.peek());
     System.out.println("queue size: " + queue.size());
 		queue.push(10);
