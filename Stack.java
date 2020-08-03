@@ -1,11 +1,12 @@
 class Stack {
   int[] list;
   int top;
-  int capacity=10;
+  int capacity;
   int size;
 
   public Stack(int n){
     list= new int[n];
+    capacity=n;
     size=n;
     top = -1;
   }
